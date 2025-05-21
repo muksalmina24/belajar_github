@@ -1,58 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalkulator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulator Grid</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <script src="index.js"></script>
-    <div class="calculator-container">
-        <form>
-            <table>
-                <tr>
-                    <td colspan="4">
-                        <input type="number">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <button type="button">AC</button>
-                    </td>
-                    <td>
-                        <button type="button">C</button>
-                    </td>
-                    <td>
-                        <button type="button">*</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td><button type="button">7</button></td>
-                    <td><button type="button">8</button></td>
-                    <td><button type="button">9</button></td>
-                    <td><button type="button">/</button></td>
-                </tr>
-                <tr>
-                    <td><button type="button">4</button></td>
-                    <td><button type="button">5</button></td>
-                    <td><button type="button">6</button></td>
-                    <td><button type="button">+</button></td>
-                </tr>
-                <tr>
-                    <td><button type="button">1</button></td>
-                    <td><button type="button">2</button></td>
-                    <td><button type="button">3</button></td>
-                    <td><button type="button">-</button></td>
-                </tr>
-                <tr>
-                    <td><button type="button">+-</button></td>
-                    <td><button type="button">0</button></td>
-                    <td><button type="button">.</button></td>
-                    <td><button type="button">=</button></td>
-                </tr>
-            </table>
-        </form>
+  <div class="calculator">
+    <input type="text" id="display" readonly />
+
+    <div class="buttons">
+      <button class="btn red" onclick="clearAll()">AC</button>
+      <button class="btn orange" onclick="clearLast()">C</button>
+      <button class="btn blue" onclick="append('*')">*</button>
+      <button class="btn blue" onclick="append('/')">/</button>
+
+      <button class="btn" onclick="append('7')">7</button>
+      <button class="btn" onclick="append('8')">8</button>
+      <button class="btn" onclick="append('9')">9</button>
+      <button class="btn blue" onclick="append('+')">+</button>
+
+      <button class="btn" onclick="append('4')">4</button>
+      <button class="btn" onclick="append('5')">5</button>
+      <button class="btn" onclick="append('6')">6</button>
+      <button class="btn blue" onclick="append('-')">-</button>
+
+      <button class="btn" onclick="append('1')">1</button>
+      <button class="btn" onclick="append('2')">2</button>
+      <button class="btn" onclick="append('3')">3</button>
+      <button class="btn" onclick="toggleSign()">+/-</button>
+
+      <button class="btn" onclick="append('0')">0</button>
+      <button class="btn" onclick="append('.')">.</button>
+      <button class="btn green" onclick="calculate()">=</button>
     </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
